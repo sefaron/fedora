@@ -142,7 +142,7 @@ sudo dnf install git gnome-tweaks nodejs ffmpeg-free libavcodec-freeworld
 # Uninstalling unused Software
 
 ```
-sudo dnf remove firefox
+sudo dnf remove firefox gnome-contacts gnome-calendar gnome-weather gnome-clocks gnome-maps simple-scan mediawriter gnome-boxes totem snapshot gnome-connections evince baobab gnome-logs malcontent-control gnome-abrt libreoffice-core gnome-tour yelp rhythmbox
 ```
 
 # Github Profile
