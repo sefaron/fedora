@@ -6,12 +6,10 @@ Things to do for setting up fedora
 
 - [Update Fedora](#update-fedora)
 - [RPM Fusion](#rpm-fusion)
-- [Install Nvidia Drivers](#install-nvidia-drivers)
-- [Install ms-fonts](#install-ms-fonts)
-- [Install Brave](#install-brave)
-- [Install Chrome](#install-chrome)
-- [Install Vscode](#install-vscode)
 - [Install fonts](#install-fonts)
+- [Install Nvidia Drivers](#install-nvidia-drivers)
+- [Install Brave](#install-brave)
+- [Install Vscode](#install-vscode)
 - [Install Additional Software](#install-additional-software)
 - [Uninstalling unused Software](#uninstalling-unused-software)
 - [Setup Github Profile](#github-profile)
@@ -60,7 +58,11 @@ sudo mokutil --import /etc/pki/akmods/certs/public_key.der
 sudo dnf install akmod-nvidia
 ```
 
-# Install ms-fonts
+# Install fonts
+
+```
+sudo dnf install jetbrains-mono-fonts open-sans-fonts
+```
 
 ```
 cd ~/Downloads/
@@ -71,15 +73,15 @@ git clone https://github.com/sefaron/ms-fonts.git
 ```
 
 ```
-mkdir /usr/local/share/fonts
+sudo mkdir /usr/local/share/fonts
 ```
 
 ```
-mv ms-fonts /usr/local/share/fonts
+sudo mv ms-fonts /usr/local/share/fonts
 ```
 
 ```
-fc-cache --force
+sudo fc-cache --force
 ```
 
 # Install Brave
@@ -109,12 +111,6 @@ sudo bash -c 'printf "{
 }" > /etc/brave/policies/managed/GroupPolicy.json'
 ```
 
-# Install Chrome
-
-```
-sudo dnf install google-chrome-stable
-```
-
 # Install Vscode
 
 ```
@@ -127,16 +123,10 @@ dnf check-update
 sudo dnf install code # or code-insiders
 ```
 
-# Install fonts
-
-```
-sudo dnf install jetbrains-mono-fonts open-sans-fonts
-```
-
 # Install Additional Software
 
 ```
-sudo dnf install git gnome-tweaks nodejs ffmpeg-free libavcodec-freeworld
+sudo dnf install git gnome-tweaks nodejs ffmpeg-free libavcodec-freeworld google-chrome-stable
 ```
 
 # Uninstalling unused Software
