@@ -5,6 +5,7 @@ Things to do for setting up fedora
 # Table of contents
 
 - [Update Fedora](#update-fedora)
+- [RPM Fusion](#rpm-fusion)
 - [Install Nvidia Drivers](#install-nvidia-drivers)
 - [Install ms-fonts](#install-ms-fonts)
 - [Install Brave](#install-brave)
@@ -12,6 +13,7 @@ Things to do for setting up fedora
 - [Install Vscode](#install-vscode)
 - [Install fonts](#install-fonts)
 - [Install Additional Software](#install-additional-software)
+- [Uninstalling unused Software](#uninstalling-unused-software)
 - [Setup Github Profile](#github-profile)
 - [Disable CAPSLOCK](#capslock)
 - [Modifying GRUB](#modifying-grub)
@@ -20,6 +22,22 @@ Things to do for setting up fedora
 
 ```
 sudo dnf update -y
+```
+
+# RPM Fusion
+
+- Enable RPM Fusion
+
+```
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+```
+
+```
+sudo dnf update @core
+```
+
+```
+sudo dnf install rpmfusion-\*-appstream-data
 ```
 
 # Install Nvidia Drivers
@@ -118,7 +136,13 @@ sudo dnf install jetbrains-mono-fonts open-sans-fonts
 # Install Additional Software
 
 ```
-sudo dnf install gnome-tweaks nodejs libavcodec-freeworld
+sudo dnf install git gnome-tweaks nodejs ffmpeg-free libavcodec-freeworld
+```
+
+# Uninstalling unused Software
+
+```
+sudo dnf remove firefox
 ```
 
 # Github Profile
